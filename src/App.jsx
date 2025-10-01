@@ -2,33 +2,24 @@ import { useState ,useEffect, use } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { ROUTES } from './const.js';
 import Button from './components/Button/Button.jsx';
 import Display from './components/Display/Display.jsx';
-
+import { BrowserRouter ,Routes ,Route} from 'react-router-dom';
+import Top from './pages/Top.jsx';
+import Question from './pages/Question.jsx';
+import Result from './pages/Result.jsx';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const handleClick = () => {
-        setCount(count + 1);
-        
-    }
-  
-  useEffect(() => {
-    console.log(`Count:` ,count);
-    if(count >= 15){
-      setCount(0);
-    }
-  } , [count]);
-
-  return (  
+  return(
     <>
-      <h1>Hello World</h1>
-      <Button type="button" disabled={false} onClick={handleClick}>
-        ボタン
-      </Button>
-
-      <Display count={count} />
+    <BrowserRouter>
+    <Routes>
+      <Route path={ROUTES.TOP} element={<Top />} />
+      <Route path={ROUTES.QUESTION} element={<Question />} />
+      <Route path={ROUTES.RESULT} element={<Result />} />
+    </Routes>
+    </BrowserRouter>  
     </>
   )
 }
