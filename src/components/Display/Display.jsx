@@ -1,18 +1,8 @@
-import { useEffect, useState } from "react";
+import React from 'react'
+import styles from './Display.module.css'
 
-function Display(props){
-     const [text, setText] = useState('loading...');
-
-     useEffect(() => {
-        setTimeout(() => {
-        setText(`カウント: ${props.count}`);
-        }, 2000);
-     }, []);
-    return(
-        <div>
-            {text}
-        </div>
-    )
+export default function Display({ children }) {
+  return (
+    <div className={styles.display}>{children}</div>
+  )
 }
-
-export default Display;

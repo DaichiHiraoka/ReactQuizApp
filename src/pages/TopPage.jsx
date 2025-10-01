@@ -1,6 +1,7 @@
-import { Link, Route } from "react-router-dom";
+import { Link} from "react-router-dom";
+import { ROUTES } from "../const.js";
 
-function Top() {
+export default function Top() {
   return (
     <div>
       <h1>Top </h1>
@@ -9,4 +10,3 @@ function Top() {
   );
 }
 
-export default Top;

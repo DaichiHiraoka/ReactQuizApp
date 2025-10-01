@@ -3,4 +3,3 @@ export const ROUTES = {
   QUESTION: '/Question',
   RESULT: '/Result',
 };
-

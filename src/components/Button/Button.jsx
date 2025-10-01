@@ -1,18 +1,11 @@
 import styles from './Button.module.css';
 
-function Button(props) {
-
-    
-
-    const {type, disabled , onClick ,children} = props;
-
-    
+export default function Button({ children, onClick }) {
 
   return (
-  <button className={styles.button} type={type} disabled={disabled} onClick={onClick}>
-    {children}
+  <button className={styles.button} type="button" onClick={onClick}>
+    <span className={styles.buttonInner}>{children}</span>
   </button>
   
   );
-}
-export default Button;
+} 
