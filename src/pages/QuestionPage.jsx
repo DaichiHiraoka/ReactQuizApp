@@ -7,7 +7,7 @@ import quizData from "../data/data.js";
 
 
 
-export default function Question() {
+export default function QuestionPage() {
   const [quizIndex, setQuizIndex] = useState(0);
   const [answerLogs, setAnswerLogs] = useState([]);
   const navigate = useNavigate();
